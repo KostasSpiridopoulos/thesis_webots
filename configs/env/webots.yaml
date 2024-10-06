@@ -1,0 +1,18 @@
+defaults:
+  - default
+  - _self_
+
+# Override from `default` config
+id: webots_reward
+action_repeat: 1
+capture_video: False
+reward_as_observation: False
+sync_env: True
+num_envs: 1
+
+# Wrapper to be instantiated
+wrapper:
+  _target_: sheeprl.envs.webots.WebotsWrapper
+  # id: ${env.id}
+  # screen_size: ${env.screen_size}
+  # seed: ${seed}
